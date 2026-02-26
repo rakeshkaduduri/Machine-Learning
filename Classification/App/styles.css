@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+/* Global */
+.stApp {
+    background: linear-gradient(135deg, #ffffff 0%, #3123ab 50%, #940c0c 100%);
+    font-family: 'Inter', sans-serif;
+    color: #1a202c;
+}
+
+div.block-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    max-width: 1200px;
+}
+
+footer, header, #MainMenu {
+    visibility: hidden;
+}
+
+/* Cards */
+.card {
+    background: rgba(255,255,255,0.97);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 1.2rem 0;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.card h1,
+.card h3,
+.card h4,
+.card p,
+.card li {
+    color: #2d3748;
+}
+
+.card h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+   /* INPUT LABELS */
+label {
+    color: #2d3748 !important;
+    font-weight: 600;
+}
+
+   /* SELECTBOX (BaseWeb) */
+.stSelectbox div[data-baseweb="select"] {
+    background-color: #ffffff !important;
+    border-radius: 10px;
+}
+
+.stSelectbox div[data-baseweb="select"] span {
+    color: #1a202c !important;
+}
+
+div[data-baseweb="menu"] div {
+    color: #1a202c !important;
+    background-color: #ffffff !important;
+}
+
+   /* TEXT / NUMBER INPUT */
+.stTextInput input,
+.stNumberInput input {
+    background-color: #ffffff !important;
+    color: #1a202c !important;
+}
+
+   /* SLIDER */
+.stSlider span {
+    color: #1a202c !important;
+}
+
+/* Header */
+.stDataFrame thead tr th {
+    background-color: #f7fafc !important;
+    color: #1a202c !important;
+    font-weight: 600;
+}
+
+/* Cells */
+.stDataFrame tbody tr td {
+    background-color: #ffffff !important;
+    color: #1a202c !important;
+}
+
+/* Remove broken overrides */
+.stDataFrame * {
+    box-shadow: none !important;
+}
+
+   /* BUTTON */
+.stButton > button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white !important;
+    border-radius: 12px;
+    padding: 0.7rem 2rem;
+    font-weight: 600;
+    border: none;
+}
+/* 
+   SUCCESS / INFO */
+.stSuccess {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white !important;
+}
+
+.stInfo {
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+    color: white !important;
+}
+
+/* METRICS */
+[data-testid="metric-container"] {
+    background: white;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+[data-testid="metric-container"] * {
+    color: #1a202c !important;
+}
+
+   /* MOBILE */
+@media (max-width: 768px) {
+    .card {
+        padding: 1.4rem;
+    }
+    .card h1 {
+        font-size: 2rem;
+    }
+}
