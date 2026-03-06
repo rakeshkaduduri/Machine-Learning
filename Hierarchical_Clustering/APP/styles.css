@@ -1,0 +1,15 @@
+.title {
+    color: #7a3cff;
+    font-weight: 800;
+}
+
+div.stButton > button {
+    background-color: #7a3cff;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+div.stButton > button:hover {
+    background-color: #5a2acc;
+}

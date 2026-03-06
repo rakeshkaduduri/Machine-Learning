@@ -1,0 +1,258 @@
+/* ========================================
+   LOAN PREDICTOR - PREMIUM FINTECH DESIGN
+   Modern Glassmorphism + Gradients + Animations
+======================================= */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ROOT VARIABLES */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  --secondary-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  --danger-gradient: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --shadow-lg: 0 25px 45px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 35px 60px rgba(0, 0, 0, 0.15);
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+}
+
+/* BASE RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* ANIMATED BACKGROUND */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* APP CONTAINER */
+.stApp {
+  background: linear-gradient(135deg, #667eea15 0%, #764ba225 100%);
+  backdrop-filter: blur(10px);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* TITLE - HERO SECTION */
+h1 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 3.5rem !important;
+  font-weight: 800 !important;
+  background: var(--primary-gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-align: center !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: -2px !important;
+  text-shadow: 0 10px 30px rgba(102, 126, 234, 0.4) !important;
+  animation: glow 2s ease-in-out infinite alternate !important;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 10px 30px rgba(102, 126, 234, 0.4); }
+  to { text-shadow: 0 10px 40px rgba(102, 126, 234, 0.6), 0 0 20px rgba(102, 126, 234, 0.3); }
+}
+
+/* SUBHEADERS */
+h2, h3 {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  background: var(--secondary-gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  position: relative !important;
+  margin-bottom: 1.5rem !important;
+}
+
+h2::after, h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: var(--secondary-gradient);
+  border-radius: 2px;
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from { width: 0; }
+  to { width: 80px; }
+}
+
+/* GLASSMORPHISM CARDS */
+[data-testid="column"], 
+.stNumberInput > div > div > div,
+.stSelectbox > div > div > div {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 24px !important;
+  padding: 1.5rem !important;
+  box-shadow: var(--shadow-lg) !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  margin: 0.5rem 0 !important;
+}
+
+[data-testid="column"]:hover,
+.stNumberInput > div > div > div:hover,
+.stSelectbox > div > div > div:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: var(--shadow-xl) !important;
+  border-color: rgba(102, 126, 234, 0.3) !important;
+}
+
+/* PREMIUM BUTTON */
+.stButton > button {
+  background: var(--primary-gradient) !important;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 1.2rem 3rem !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.2rem !important;
+  color: white !important;
+  box-shadow: var(--shadow-lg) !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+.stButton > button:hover {
+  transform: translateY(-5px) scale(1.05) !important;
+  box-shadow: 0 30px 60px rgba(102, 126, 234, 0.5) !important;
+}
+
+.stButton > button:active {
+  transform: translateY(-2px) scale(1.02) !important;
+}
+
+/* METRICS - KPI CARDS */
+[data-testid="metric-container"] {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(20px) !important;
+  border-radius: 20px !important;
+  border: 1px solid var(--glass-border) !important;
+  padding: 2rem !important;
+  box-shadow: var(--shadow-lg) !important;
+  transition: all 0.3s ease !important;
+}
+
+[data-testid="metric-container"]:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: var(--shadow-xl) !important;
+}
+
+/* RESULT CONTAINER */
+div[style*="background: linear-gradient"] {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(34, 197, 94, 0.1) 100%) !important;
+  backdrop-filter: blur(20px) !important;
+  border-radius: 30px !important;
+  border: 3px solid rgba(16, 185, 129, 0.4) !important;
+  box-shadow: 0 25px 50px rgba(16, 185, 129, 0.25) !important;
+  animation: resultPop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+}
+
+@keyframes resultPop {
+  0% { transform: scale(0.8) rotate(-5deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* CHARTS */
+canvas, figure {
+  border-radius: 20px !important;
+  box-shadow: var(--shadow-lg) !important;
+  transition: transform 0.3s ease !important;
+}
+
+canvas:hover {
+  transform: scale(1.02) !important;
+}
+
+/* STATUS MESSAGES */
+.stSuccess {
+  background: var(--success-gradient) !important;
+  backdrop-filter: blur(15px) !important;
+  border-radius: 20px !important;
+  border-left: 6px solid #10b981 !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.stError {
+  background: linear-gradient(135deg, #ff6b6b, #ffa726) !important;
+  backdrop-filter: blur(15px) !important;
+  border-radius: 20px !important;
+  border-left: 6px solid #ff4444 !important;
+}
+
+/* INPUT LABELS */
+.stMarkdown > p {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  margin-bottom: 0.5rem !important;
+  font-size: 1.1rem !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .stApp { padding: 1rem !important; }
+  h1 { font-size: 2.5rem !important; }
+  [data-testid="column"] { margin: 0.25rem 0 !important; }
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-gradient);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+}
+
+/* LOADING SPINNER */
+.stSpinner > div {
+  border-color: #667eea !important;
+  border-top-color: transparent !important;
+  animation: spin 1s linear infinite !important;
+}
+
+/* SELECTION ANIMATIONS */
+.stSelectbox > div > div {
+  border-radius: 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+.stSelectbox > div > div:hover {
+  border-color: #667eea !important;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2) !important;
+}

@@ -1,0 +1,5 @@
+-----------==---- Regression Using Decsion Trees -------------------------
+
+-> Decision  Trees interpolate, they do not extrapolate.
+-> Decision tree regression works by partitioning the input space and predicting constant values in each region; hence, 
+    it interpolates within the training data but cannot extrapolate beyond it.
